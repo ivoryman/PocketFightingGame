@@ -11,6 +11,12 @@ public class PocketFightingGame
     {
         System.out.println("Hello World");
         Pokemon pikachu = new Pokemon("Pikachu", 100, 40);
+        Pokemon shiggy = new Pokemon("Shiggy", 100, 20);
         System.out.println(pikachu);
+        while(pikachu.getHp() >= 0 && shiggy.getHp() >= 0)
+        {
+            shiggy.angreifen(pikachu);
+            pikachu.angreifen(shiggy);
+        }
     }
 }

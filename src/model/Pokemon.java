@@ -42,5 +42,16 @@ public class Pokemon
         return name + " " + hp  + " " + ap + " ";
 
     }
-/* Das ist ein Kommentar */
+    public void angreifen(Pokemon pokemon)
+    {
+        System.out.println(this.name +  " greift " + pokemon.getName()+ " an ");
+        pokemon.setHp(pokemon.getHp()- this.ap);
+        System.out.println(pokemon.getName() + " hat: " + pokemon.getHp());
+        if(pokemon.getHp() <= 0)
+        {
+            System.out.println("Das " + pokemon.getName() + " wurde besiegt.");
+
+        }
+
+    }
 }
